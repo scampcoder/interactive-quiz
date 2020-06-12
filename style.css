@@ -36,3 +36,18 @@ p {
   padding-top: 5px;
   position: relative;
 }
+
+.nextButton {
+  border-radius: 6px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  background-color: #cc0000;
+  /*clear: both*/
+  color: #fff;
+  font-family: 'Rokkitt', serif;
+  font-weight: bold;
+  position: relative;
+  margin: auto;
+  padding-top: 20px;
+}
