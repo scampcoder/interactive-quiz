@@ -5,3 +5,7 @@ h1 {
   color: #fff;
   font-size: 35px;
 }
+
+ul {
+  list-style: none;
+}
