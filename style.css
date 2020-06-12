@@ -51,3 +51,15 @@ p {
   margin: auto;
   padding-top: 20px;
 }
+
+.question {
+  font-family: 'Rokkitt', serif;
+  font-size: 2em;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  border-radius: 6px;
+  background-color: #f2f205;
+  text-align: center;
+  color: #27a635;
+}
