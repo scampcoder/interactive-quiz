@@ -72,5 +72,10 @@ p {
   text-align: center;
   padding: 2px;
   font-family: 'Rokkitt', serif;
-  color: re;
+  color: red;
+}
+
+.choiceList {
+  font-family: Courier, serif;
+  color: blueviolet;
 }
