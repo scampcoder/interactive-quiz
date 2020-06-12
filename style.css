@@ -9,3 +9,9 @@ h1 {
 ul {
   list-style: none;
 }
+
+li {
+  font-family: 'Rokkitt', serif;
+  font-size: 2em;
+  color: #feb135;
+}
