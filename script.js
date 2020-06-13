@@ -47,3 +47,7 @@ const questions = [{
       choices: ['cub', 'balu', 'young', 'bearlet'],
       correctAnswer: 0
 }];
+
+let currentQuestion = 0;
+let correctAnswers = 0;
+let quizOver = false;
