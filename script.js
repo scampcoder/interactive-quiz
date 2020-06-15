@@ -125,3 +125,6 @@ function displayScore() {
   $(document).find(".quizContainer > .result").text("You scored: " + correctAnswers + " out of: " + questions.length);
   $(document).find(".quizContainer > .result").show();
 }
+function hideScore() {
+  $(document).find(".result").hide();
+}
