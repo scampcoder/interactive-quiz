@@ -115,3 +115,8 @@ function displayCurrentQuestion () {
     $('<li><input type="radio" value=' + i + ' name="dynradio">' + choice + '</li>').appendTo(choiceList);
   }
 }
+function resetQuiz() {
+  currentQuestion = 0;
+  correctAnswers = 0;
+  hideScore();
+}
