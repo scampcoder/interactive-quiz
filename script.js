@@ -1,3 +1,7 @@
+//Quiz functionality
+/*Array of objects that holds the questions,
+answer choices, and IDs the correct answer.
+the object is information within {}*/
 const questions = [{
       question: "What is the baby of a moth known as?",
       choices: ['baby', 'infant', 'kit', 'larva'],
@@ -48,16 +52,22 @@ const questions = [{
       correctAnswer: 0
 }];
 
+//set beginning of quiz
 let currentQuestion = 0;
 let correctAnswers = 0;
 let quizOver = false;
 
-$(document).ready(function(){
+/*jQuery function that controls quiz functionality
+allowing script to keep score, move from question to question,
+and handles the game over & restarting events.
+First line ensures script runs after the page
+fully loads*/
+$(document).ready(function() {
   displayCurrentQuestion();
   $(this).find('.quizMessage').hide();
   $(this).find('.nextButton').on('click', function() {
     if (!quizOver) {
-      value = $("input[type='radio']:checked").val();
+      let value = $("input[type='radio']:checked").val();
       if (value == undefined) {
         $(document).find('.quizMessage').text("Please select an answer.");
         $(document).find('.quizMessage').show();
@@ -84,3 +94,24 @@ $(document).ready(function(){
     }
   });
 });
+
+function displayCurrentQuestion () {
+  console.log("In display current Question.");
+
+  let question = questions[currentQuestion].question;
+  let questionClass = $(document).find(".quizContainer > .question");
+  let choiceList = $(document).find(".quizContainer > .choiceList");
+  let numChoices = questions[currentQuestion].choices.length;
+
+  // Set the questionClass text to the current question
+  $(questionClass).text(question);
+
+  // Remove all current <li> element (if any)
+  $(choiceList).find("li").remove();
+
+  let choice;
+  for (let i=0; i < numChoices; i++){
+    choice = questions[currentQuestion].choices[i];
+    $('<li><input type="radio" value=' + i + ' name="dynradio">' + choice + '</li>').appendTo(choiceList);
+  }
+}
